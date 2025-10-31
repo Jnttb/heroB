@@ -1,11 +1,6 @@
 body {
   font-family: "pf-grand-gothik-variable", sans-serif;
   overflow-x: hidden;
-  background: #000;
-  color: #fff;
-}
-
-* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,43 +10,43 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end; /* ligeramente a la derecha */
   min-height: 100vh;
   width: 100%;
-  background-image: url("fondo1.png");
+  background-image: url("Imagenes/fondo1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 2rem 12%;
-  text-align: center; 
+  padding: 2rem 12%; /* controla el desplazamiento a la derecha */
+  text-align: right;
 }
 
 .hero-overlay {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   gap: 1.5rem;
   color: #ff0000;
 }
 
 @keyframes introMorph {
-  0%   { font-variation-settings: "wght" 350, "wdth" 90; transform: scale(0.95) translateY(0); opacity: 0; }
-  50%  { font-variation-settings: "wght" 550, "wdth" 110; transform: scale(1.02) translateY(-1.5%); opacity: 1; }
-  100% { font-variation-settings: "wght" 450, "wdth" 100; transform: scale(1) translateY(0); opacity: 1; }
+  0%   { font-variation-settings: "wght" 300, "wdth" 90; transform: scale(0.95) translateY(0); opacity: 0; }
+  50%  { font-variation-settings: "wght" 550, "wdth" 120; transform: scale(1.02) translateY(-2%); opacity: 1; }
+  100% { font-variation-settings: "wght" 400, "wdth" 100; transform: scale(1) translateY(0); opacity: 1; }
 }
 
 @keyframes morphLoop {
-  0%   { font-variation-settings: "wght" 450, "wdth" 100; transform: scale(1) translateY(0); }
-  25%  { font-variation-settings: "wght" 600, "wdth" 115; transform: scale(1.03) translateY(-0.5%); }
-  50%  { font-variation-settings: "wght" 650, "wdth" 120; transform: scale(1.05) translateY(-1%); }
-  75%  { font-variation-settings: "wght" 550, "wdth" 110; transform: scale(1.02) translateY(-0.5%); }
-  100% { font-variation-settings: "wght" 450, "wdth" 100; transform: scale(1) translateY(0); }
+  0%   { font-variation-settings: "wght" 400, "wdth" 100; transform: scale(1) translateY(0); }
+  25%  { font-variation-settings: "wght" 600, "wdth" 130; transform: scale(1.03) translateY(-1%); }
+  50%  { font-variation-settings: "wght" 700, "wdth" 150; transform: scale(1.05) translateY(-2%); }
+  75%  { font-variation-settings: "wght" 550, "wdth" 120; transform: scale(1.02) translateY(-1%); }
+  100% { font-variation-settings: "wght" 400, "wdth" 100; transform: scale(1) translateY(0); }
 }
 
 .hero-title {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end; /* alineado a la derecha */
   gap: 0.2rem;
   font-size: 9vw;
 }
@@ -60,7 +55,7 @@ body {
 .hero-title .gothik {
   display: inline-block;
   animation: introMorph 2s ease-out forwards,
-             morphLoop 5s ease-in-out infinite 2s;
+             morphLoop 4s cubic-bezier(.4,0,.2,1) infinite 2s;
   transform-origin: center;
 }
 
@@ -69,7 +64,7 @@ body {
   max-width: 600px;
   margin-top: 1rem;
   color: #fff;
-  text-align: center;
+  text-align: right;
 }
 
 .btn {
@@ -95,9 +90,7 @@ body {
     align-items: flex-end;
     text-align: right;
     padding: 2rem 2rem;
-    background-image: url("fondo2.png");
-    background-position: center top;
-    background-size: cover;
+    background-image: url("Imagenes/fondo2.png");
   }
 
   .hero-overlay {
