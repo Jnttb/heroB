@@ -1,0 +1,122 @@
+body {
+  font-family: "pf-grand-gothik-variable", sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("Imagenes/fondo1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem 12%;
+  text-align: center; 
+}
+
+.hero-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  color: #ff0000;
+  margin-left: 40%;
+}
+
+@keyframes introMorph {
+  0%   { font-variation-settings: "wght" 300, "wdth" 90; transform: scale(0.95) translateY(0); opacity: 0; }
+  50%  { font-variation-settings: "wght" 550, "wdth" 120; transform: scale(1.02) translateY(-2%); opacity: 1; }
+  100% { font-variation-settings: "wght" 400, "wdth" 100; transform: scale(1) translateY(0); opacity: 1; }
+}
+
+@keyframes morphLoop {
+  0%   { font-variation-settings: "wght" 400, "wdth" 100; transform: scale(1) translateY(0); }
+  25%  { font-variation-settings: "wght" 600, "wdth" 130; transform: scale(1.03) translateY(-1%); }
+  50%  { font-variation-settings: "wght" 700, "wdth" 150; transform: scale(1.05) translateY(-2%); }
+  75%  { font-variation-settings: "wght" 550, "wdth" 120; transform: scale(1.02) translateY(-1%); }
+  100% { font-variation-settings: "wght" 400, "wdth" 100; transform: scale(1) translateY(0); }
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 9vw;
+}
+
+.hero-title .grand,
+.hero-title .gothik {
+  display: inline-block;
+  animation: introMorph 2s ease-out forwards,
+             morphLoop 4s cubic-bezier(.4,0,.2,1) infinite 2s;
+  transform-origin: center;
+}
+
+.hero-overlay p {
+  font-size: 1.6rem;
+  max-width: 600px;
+  margin-top: 1rem;
+  color: #fff;
+  text-align: center;
+}
+
+.btn {
+  padding: 0.9rem 2rem;
+  font-size: 1.2rem;
+  background-color: #ff0000;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 2rem;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background-color: #aaa;
+  transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .hero {
+    align-items: flex-end;
+    text-align: right;
+    padding: 2rem 2rem;
+    background-image: url("Imagenes/fondo2.png");
+  }
+
+  .hero-overlay {
+    align-items: flex-end;
+    margin-left: 0;
+  }
+
+  .hero-title {
+    font-size: 11vw;
+    align-items: flex-end;
+    transform: translateX(6%);
+  }
+
+  .hero-overlay p {
+    font-size: 4vw;
+    max-width: 40%;
+    text-align: flex-end;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
