@@ -1,8 +1,6 @@
 body {
   font-family: "pf-grand-gothik-variable", sans-serif;
   overflow-x: hidden;
-  background: #000;
-  color: #fff;
 }
 
 * {
@@ -18,7 +16,7 @@ body {
   align-items: center;
   min-height: 100vh;
   width: 100%;
-  background-image: url("fondo1.png");
+  background-image: url("Imagenes/fondo1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,8 +29,9 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  color: #ff0000;
   position: relative;
+  color: #ff0000;
+  margin-left: 40%;
 }
 
 @keyframes introMorph {
@@ -71,7 +70,6 @@ body {
   margin-top: 1rem;
   color: #fff;
   text-align: center;
-  font-variation-settings: "wght" 900;
 }
 
 .btn {
@@ -97,11 +95,12 @@ body {
     align-items: flex-end;
     text-align: right;
     padding: 2rem 2rem;
-    background-image: url("fondo2.png");
+    background-image: url("Imagenes/fondo2.png");
   }
 
   .hero-overlay {
     align-items: flex-end;
+    margin-left: 0;
   }
 
   .hero-title {
@@ -113,17 +112,11 @@ body {
   .hero-overlay p {
     font-size: 4vw;
     max-width: 40%;
-    text-align: right;
-    font-variation-settings: "wght" 700;
+    text-align: flex-end;
   }
 
   .btn {
     font-size: 1rem;
     padding: 0.8rem 1.5rem;
-  }
-}
-
-    left: 0;
-    position: relative;
   }
 }
