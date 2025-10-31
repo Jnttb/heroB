@@ -1,6 +1,9 @@
 body {
   font-family: "pf-grand-gothik-variable", sans-serif;
   overflow-x: hidden;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,23 +13,25 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end; /* ligeramente a la derecha */
+  align-items: center;
   min-height: 100vh;
   width: 100%;
-  background-image: url("Imagenes/fondo1.png");
+  background-image: url("fondo1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 2rem 12%; /* controla el desplazamiento a la derecha */
-  text-align: right;
+  padding: 2rem 12%;
+  text-align: center;
 }
 
 .hero-overlay {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   gap: 1.5rem;
+  position: relative;
   color: #ff0000;
+  margin-left: 40%;
 }
 
 @keyframes introMorph {
@@ -46,7 +51,7 @@ body {
 .hero-title {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* alineado a la derecha */
+  align-items: center;
   gap: 0.2rem;
   font-size: 9vw;
 }
@@ -64,7 +69,7 @@ body {
   max-width: 600px;
   margin-top: 1rem;
   color: #fff;
-  text-align: right;
+  text-align: center;
 }
 
 .btn {
@@ -90,11 +95,12 @@ body {
     align-items: flex-end;
     text-align: right;
     padding: 2rem 2rem;
-    background-image: url("Imagenes/fondo2.png");
+    background-image: url("fondo2.png");
   }
 
   .hero-overlay {
     align-items: flex-end;
+    margin-left: 0;
   }
 
   .hero-title {
@@ -106,7 +112,7 @@ body {
   .hero-overlay p {
     font-size: 4vw;
     max-width: 40%;
-    text-align: right;
+    text-align: flex-end;
   }
 
   .btn {
